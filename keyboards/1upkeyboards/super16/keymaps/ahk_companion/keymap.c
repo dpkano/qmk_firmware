@@ -8,76 +8,76 @@ extern rgblight_config_t rgblight_config;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //Layer 0 - Base Layer (F13 to F24, and One Shot Layer 1,2,3 or Toggle Layer 4)
         [0] = LAYOUT_ortho_4x4(
-                KC_F13, KC_F14, KC_F15, KC_F16,
-                KC_F17, KC_F18, KC_F19, KC_F20,
-                KC_F21, KC_F22, KC_F23, KC_F24,
-                OSL(1), OSL(2), OSL(3), TG(4)    //Transparent to let you go between layers
+                KC_F13, KC_F14, KC_F15, OSL(1),
+                KC_F16, KC_F17, KC_F18, OSL(2),
+                KC_F19, KC_F20, KC_F21, OSL(3),
+                KC_F22, KC_F23, KC_F24, TG(4)
 		),
 
         [1] = LAYOUT_ortho_4x4(
-                LALT(KC_F13), LALT(KC_F14), LALT(KC_F15), LALT(KC_F16),
-                LALT(KC_F17), LALT(KC_F18), LALT(KC_F19), LALT(KC_F20),
-                LALT(KC_F21), LALT(KC_F22), LALT(KC_F23), LALT(KC_F24),
-                KC_TRNS,      KC_TRNS,      KC_TRNS,      KC_TRNS         //Transparent to let you go between layers
+                LALT(KC_F13), LALT(KC_F14), LALT(KC_F15), KC_TRNS,
+                LALT(KC_F16), LALT(KC_F17), LALT(KC_F18), KC_TRNS,
+                LALT(KC_F19), LALT(KC_F20), LALT(KC_F21), KC_TRNS,
+                LALT(KC_F22), LALT(KC_F23), LALT(KC_F24), KC_TRNS
         ),
 
         //Layer 2 - Shift + Function Key Layer
         [2] = LAYOUT_ortho_4x4(
-                LSFT(KC_F13), LSFT(KC_F14), LSFT(KC_F15), LSFT(KC_F16),
-                LSFT(KC_F17), LSFT(KC_F18), LSFT(KC_F19), LSFT(KC_F20),
-                LSFT(KC_F21), LSFT(KC_F22), LSFT(KC_F23), LSFT(KC_F24),
-                KC_TRNS,      KC_TRNS,      KC_TRNS,      KC_TRNS         //Transparent to let you go between layers
+                LSFT(KC_F13), LSFT(KC_F14), LSFT(KC_F15), KC_TRNS,
+                LSFT(KC_F16), LSFT(KC_F17), LSFT(KC_F18), KC_TRNS,
+                LSFT(KC_F19), LSFT(KC_F20), LSFT(KC_F21), KC_TRNS,
+                LSFT(KC_F22), LSFT(KC_F23), LSFT(KC_F24), KC_TRNS
         ),
 
         //Layer 3 - Control + Function Key
         [3] = LAYOUT_ortho_4x4(
-                LCTL(KC_F13), LCTL(KC_F14), LCTL(KC_F15), LCTL(KC_F16),
-                LCTL(KC_F17), LCTL(KC_F18), LCTL(KC_F19), LCTL(KC_F20),
-                LCTL(KC_F21), LCTL(KC_F22), LCTL(KC_F23), LCTL(KC_F24),
-                KC_TRNS,      KC_TRNS,      KC_TRNS,      KC_TRNS         //Transparent to let you go between layers
+                LCTL(KC_F13), LCTL(KC_F14), LCTL(KC_F15), KC_TRNS,
+                LCTL(KC_F16), LCTL(KC_F17), LCTL(KC_F18), KC_TRNS,
+                LCTL(KC_F19), LCTL(KC_F20), LCTL(KC_F21), KC_TRNS,
+                LCTL(KC_F22), LCTL(KC_F23), LCTL(KC_F24), KC_TRNS
         ),
 
         //Layer 4 - Multimedia
         [4] = LAYOUT_ortho_4x4(
-                KC_MPRV, KC_MPLY, KC_MNXT,   KC_VOLU,
-                KC_NO,   KC_NO,   KC_NO,     KC_MUTE,
-                KC_NO,   RESET,   EEP_RST,   KC_VOLD,
-                TG(5),   KC_TRNS, KC_TRNS,   KC_TRNS         //Transparent to let you go between layers
+                KC_VOLD, KC_MUTE, KC_VOLD, KC_TRNS,
+                KC_MPRV, KC_MPLY, KC_MNXT, KC_TRNS,
+                RESET,   KC_NO,   KC_NO,   KC_TRNS,
+                EEP_RST, KC_NO,   TG(4),   TG(5)
         ),
 
         //Layer 5 - Keyboard Lights, Programming and Special Functions
         [5] = LAYOUT_ortho_4x4(
-                RGB_MOD,  RGB_HUI, RGB_SAI,   RGB_VAI,
-                RGB_RMOD, RGB_HUD, RGB_SAD,   RGB_VAD,
-                RGB_TOG,  EEP_RST, RESET,     KC_LSHIFT,
-                KC_TRNS,  KC_TRNS, KC_TRNS,   KC_TRNS         //Transparent to let you go between layers
+                RGB_MOD,  RGB_HUI, RGB_SAI, KC_TRNS,
+                RGB_RMOD, RGB_HUD, RGB_SAD, KC_TRNS,
+                RGB_VAI,  RGB_TOG, KC_NO,   KC_TRNS,
+                RGB_VAD,  KC_NO,   KC_NO,   KC_TRNS
         ),
 };
 
 const rgblight_segment_t PROGMEM my_layer0_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{0,16,HSV_ORANGE}
-	);
-const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 		{0,16,HSV_GREEN}
 	);
-const rgblight_segment_t PROGMEM my_layer2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 		{0,16,HSV_RED}
 	);
-const rgblight_segment_t PROGMEM my_layer3_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+const rgblight_segment_t PROGMEM my_layer2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 		{0,16,HSV_BLUE}
 	);
-const rgblight_segment_t PROGMEM my_layer4_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+const rgblight_segment_t PROGMEM my_layer3_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 		{0,16,HSV_WHITE}
 	);
+const rgblight_segment_t PROGMEM my_layer4_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+		{0,16,HSV_YELLOW}
+	);
 const rgblight_segment_t PROGMEM my_layer5_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{0,16,HSV_TEAL}
+		{0,16,HSV_PURPLE}
 	);
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
         my_layer0_layer,
-		my_layer1_layer,
-		my_layer2_layer,
-		my_layer3_layer,
-		my_layer4_layer,
+        my_layer1_layer,
+        my_layer2_layer,
+        my_layer3_layer,
+        my_layer4_layer,
         my_layer5_layer
 	);
 

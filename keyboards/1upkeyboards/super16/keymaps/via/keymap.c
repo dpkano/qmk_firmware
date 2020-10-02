@@ -12,8 +12,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT_ortho_4x4(
         RESET, KC_TRNS,   KC_TRNS,   KC_TRNS,
         KC_TRNS, KC_TRNS,   KC_TRNS,   KC_TRNS,
-        KC_TRNS, KC_TRNS,   KC_TRNS,   KC_TRNS,
-        KC_TRNS, KC_TRNS,   KC_TRNS,   KC_TRNS
+        KC_TRNS, KC_TRNS,   KC_TRNS,   RGB_MOD,
+        KC_TRNS, KC_TRNS,   RGB_TOG,   KC_TRNS
     ),
 
     [2] = LAYOUT_ortho_4x4(
