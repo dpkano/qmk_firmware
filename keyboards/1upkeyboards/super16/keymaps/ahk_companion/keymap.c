@@ -10,7 +10,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         [0] = LAYOUT_ortho_4x4(
                 KC_F13, KC_F14, KC_F15, OSL(1),
                 KC_F16, KC_F17, KC_F18, OSL(2),
-                KC_F19, KC_F20, KC_F21, OSL(3),
+                KC_F19, KC_F20, KC_F21, TG(3),
                 KC_F22, KC_F23, KC_F24, TG(4)
 		),
 
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         //Layer 4 - Multimedia
         [4] = LAYOUT_ortho_4x4(
-                KC_VOLD, KC_MUTE, KC_VOLD, KC_TRNS,
+                KC_VOLD, KC_MUTE, KC_VOLU, KC_TRNS,
                 KC_MPRV, KC_MPLY, KC_MNXT, KC_TRNS,
                 RESET,   KC_NO,   KC_NO,   KC_TRNS,
                 EEP_RST, KC_NO,   TG(4),   TG(5)
