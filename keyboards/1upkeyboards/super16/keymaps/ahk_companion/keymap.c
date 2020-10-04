@@ -31,25 +31,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         //Layer 3 - Control + Function Key
         [3] = LAYOUT_ortho_4x4(
-                LCTL(KC_F13), LCTL(KC_F14), LCTL(KC_F15), KC_TRNS,
-                LCTL(KC_F16), LCTL(KC_F17), LCTL(KC_F18), KC_TRNS,
+                LCTL(KC_F13), LCTL(KC_F14), LCTL(KC_F15), KC_NO,
+                LCTL(KC_F16), LCTL(KC_F17), LCTL(KC_F18), KC_NO,
                 LCTL(KC_F19), LCTL(KC_F20), LCTL(KC_F21), KC_TRNS,
-                LCTL(KC_F22), LCTL(KC_F23), LCTL(KC_F24), KC_TRNS
+                LCTL(KC_F22), LCTL(KC_F23), LCTL(KC_F24), KC_NO
         ),
 
         //Layer 4 - Multimedia
         [4] = LAYOUT_ortho_4x4(
-                KC_VOLD, KC_MUTE, KC_VOLU, KC_TRNS,
-                KC_MPRV, KC_MPLY, KC_MNXT, KC_TRNS,
-                RESET,   KC_NO,   KC_NO,   KC_TRNS,
+                KC_VOLD, KC_MUTE, KC_VOLU, KC_NO,
+                KC_MPRV, KC_MPLY, KC_MNXT, KC_NO,
+                RESET,   KC_NO,   KC_NO,   KC_NO,
                 EEP_RST, KC_NO,   TG(4),   TG(5)
         ),
 
         //Layer 5 - Keyboard Lights, Programming and Special Functions
         [5] = LAYOUT_ortho_4x4(
-                RGB_MOD,  RGB_HUI, RGB_SAI, KC_TRNS,
-                RGB_RMOD, RGB_HUD, RGB_SAD, KC_TRNS,
-                RGB_VAI,  RGB_TOG, KC_NO,   KC_TRNS,
+                RGB_MOD,  RGB_HUI, RGB_SAI, RGB_TOG,
+                RGB_RMOD, RGB_HUD, RGB_SAD, KC_NO,
+                RGB_VAI,  KC_NO,   KC_NO,   KC_NO,
                 RGB_VAD,  KC_NO,   KC_NO,   KC_TRNS
         ),
 };
