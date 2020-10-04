@@ -1,3 +1,9 @@
+# About this fork
+
+This is just my customization repo for my keyboards and to keep it in sync with the main QMK repo.
+
+The original readme follows:
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
