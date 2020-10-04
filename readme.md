@@ -2,7 +2,7 @@
 
 This is just my customization repo for my keyboards and to keep it in sync with the main QMK repo.
 
-The original readme follows:
+The original readme can be checked below:
 
 # Quantum Mechanical Keyboard Firmware
 
