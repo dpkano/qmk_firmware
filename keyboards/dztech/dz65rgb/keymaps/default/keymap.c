@@ -9,17 +9,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL,  KC_LGUI, KC_LALT,                            KC_SPC,                    MO(2),   MO(1),   KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
     ),
     [1] = LAYOUT_65_ansi(
-        KC_GRAVE,       KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, KC_MPLY,
-        _______,        RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, KC_PSCR, KC_SLCK, KC_PAUS, RESET,   KC_MUTE,
-        CTL_T(KC_CAPS), RGB_SPI, RGB_SPD, _______, _______, _______, _______, _______, _______, _______, _______, _______,          EEP_RST, KC_VOLU,
-        KC_LSFT,                 _______, _______, _______, _______, _______, NK_TOGG, _______, _______, _______, _______, _______, KC_PGUP, KC_VOLD,
-        _______,        _______, _______,                            _______,                   _______, _______, _______, KC_HOME, KC_PGDN, KC_END
+        KC_GRAVE,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12, _______, KC_MPLY,
+        _______,  RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, KC_PSCR, KC_SLCK, KC_PAUS, RESET,   KC_MUTE,
+        _______,  RGB_SPI, RGB_SPD, _______, _______, _______, _______, _______, _______, _______, _______, _______,          EEP_RST, KC_VOLU,
+        _______,           _______, _______, _______, _______, _______, NK_TOGG, _______, _______, _______, _______, _______, KC_PGUP, KC_VOLD,
+        _______,  _______, _______,                            _______,                   XXXXXXX, _______, _______, KC_HOME, KC_PGDN, KC_END
     ),
     [2] = LAYOUT_65_ansi(
-        KC_GRAVE, KC_F13,  KC_F14,   KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20,  KC_F21,  KC_F22,  KC_F23,   KC_F24, XXXXXXX, KC_MPLY,
-        XXXXXXX,  XXXXXXX, RGB_RMOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
-        XXXXXXX,  XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, KC_VOLU,
-        XXXXXXX,           XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGUP, KC_VOLD,
-        XXXXXXX,  XXXXXXX, XXXXXXX,                             XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_PGDN, KC_END
+        KC_GRAVE,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20, KC_F21,   KC_F22,  KC_F23,  KC_F24, _______, KC_MPLY,
+        _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MUTE,
+        _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______, KC_VOLU,
+        _______,           _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_PGUP, KC_VOLD,
+        _______,  _______, _______,                            _______,                   _______, XXXXXXX, _______, KC_HOME, KC_PGDN, KC_END
     )
 };
