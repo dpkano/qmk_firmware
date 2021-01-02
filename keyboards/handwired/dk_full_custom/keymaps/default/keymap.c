@@ -27,35 +27,39 @@ enum encoder_sub_modes {
 	EXTRA_PAGE,
 	EXTRA_HOME_END,
 	ARROWS_UP_DOWN,
-	ARROWS_LEFT_RIGHT
+	ARROWS_LEFT_RIGHT,
+	ARROWS_SCR_UP_DOWN,
+	ARROWS_SCR_LEFT_RIGHT
 };
 
 #define MAX_MEDIA_MODES 2
 #define MAX_YOUTUBE_MODES 3
 #define MAX_EXTRA_MODES 2
-#define MAX_ARROWS_MODES 2
+#define MAX_ARROWS_MODES 4
 
 static const uint8_t maxSubModes[] = { MAX_MEDIA_MODES, MAX_YOUTUBE_MODES, MAX_EXTRA_MODES, MAX_ARROWS_MODES };
 
 static const uint8_t mediaModes[MAX_MEDIA_MODES]     = { MEDIA_VOL, MEDIA_TRACK };
 static const uint8_t youtubeModes[MAX_YOUTUBE_MODES] = { YOUTUBE_10s, YOUTUBE_5s, YOUTUBE_1f };
 static const uint8_t extraModes[MAX_EXTRA_MODES]     = { EXTRA_PAGE, EXTRA_HOME_END };
-static const uint8_t arrowsModes[MAX_ARROWS_MODES]   = { ARROWS_UP_DOWN, ARROWS_LEFT_RIGHT };
+static const uint8_t arrowsModes[MAX_ARROWS_MODES]   = { ARROWS_UP_DOWN, ARROWS_LEFT_RIGHT, ARROWS_SCR_UP_DOWN, ARROWS_SCR_LEFT_RIGHT};
 
 const uint8_t* subModes[] = { mediaModes, youtubeModes, extraModes, arrowsModes };
 
 uint8_t encoderMode = MEDIA;
 uint8_t encoderSubModeIndex = 0;
 static const uint8_t encoderKeys[][3] = {
-    { KC_VOLU,  KC_VOLD,   KC_MUTE  }, // MEDIA_VOL
-	{ KC_MNXT,  KC_MPRV,   KC_MPLY  }, // MEDIA_TRACK
-	{ KC_L,	    KC_J,      KC_SPACE }, // YOUTUBE_1s
-	{ KC_RIGHT, KC_LEFT,   KC_SPACE }, // YOUTUBE_5s
-	{ KC_COMMA, KC_DOT,    KC_SPACE }, // YOUTUBE_1f
-	{ KC_PGUP,  KC_PGDOWN, KC_NO    }, // EXTRA_PAG
-	{ KC_END,   KC_HOME,   KC_NO    }, // EXTRA_HOME_END
-	{ KC_UP,    KC_DOWN,   KC_NO    }, // ARROWS_UP_DOWN
-	{ KC_RIGHT, KC_LEFT,   KC_NO    }  // ARROWS_LEFT_RIGHT
+    { KC_VOLU,        KC_VOLD,        KC_MUTE  }, // MEDIA_VOL
+	{ KC_MNXT,        KC_MPRV,        KC_MPLY  }, // MEDIA_TRACK
+	{ KC_L,	          KC_J,           KC_SPACE }, // YOUTUBE_1s
+	{ KC_RIGHT,       KC_LEFT,        KC_SPACE }, // YOUTUBE_5s
+	{ KC_COMMA,       KC_DOT,         KC_SPACE }, // YOUTUBE_1f
+	{ KC_PGUP,        KC_PGDOWN,      KC_NO    }, // EXTRA_PAG
+	{ KC_END,         KC_HOME,        KC_NO    }, // EXTRA_HOME_END
+	{ KC_UP,          KC_DOWN,        KC_NO    }, // ARROWS_UP_DOWN
+	{ KC_RIGHT,       KC_LEFT,        KC_NO    }, // ARROWS_LEFT_RIGHT
+	{ KC_MS_WH_UP,    KC_MS_WH_DOWN,  KC_NO    }, // MOUSE_WHEEL_UP_DOWN
+	{ KC_MS_WH_RIGHT, KC_MS_WH_LEFT,  KC_NO    }  // MOUSE_WHEEL_UP_DOWN
 };
 static const char* encoderLabels[][3] = {
     { "VolUp", "VolDn", "Mute " },
@@ -66,7 +70,9 @@ static const char* encoderLabels[][3] = {
 	{ "PgUp ", "PgDn ", "     " },
 	{ " End ", "Home ", "     " },
 	{ " Up  ", "Down ", "     " },
-	{ "Right", "Left ", "     " }
+	{ "Right", "Left ", "     " },
+	{ "ScrUp", "ScrDn", "     " },
+	{ "ScrRt", "ScrLt", "     " }
 };
 
 static const char* layerLabels[][5] = {
