@@ -223,14 +223,14 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 void oled_task_user(void) {
     char buff[30];
 	uint8_t index = subModes[encoderMode][encoderSubModeIndex];
-	sprintf(buff, "%s  %s   %s\n", layerLabels[currentLayer][0], layerLabels[currentLayer][1], encoderLabels[index][0]);
+	sprintf(buff, "%s  %s  |%s\n", layerLabels[currentLayer][0], layerLabels[currentLayer][1], encoderLabels[index][0]);
 	oled_write(buff, false);
 	
-	sprintf(buff, "%s  %s   %s\n", layerLabels[currentLayer][2], layerLabels[currentLayer][3], encoderLabels[index][1]);
+	sprintf(buff, "%s  %s  |%s\n", layerLabels[currentLayer][2], layerLabels[currentLayer][3], encoderLabels[index][1]);
 	oled_write(buff, false);
-	oled_write_P(PSTR("--------------------\n"), false);
+	oled_write_P(PSTR("--------------+     \n"), false);
 
-	sprintf(buff, "%s Layer:%d %s\n", layerLabels[currentLayer][4], currentLayer, encoderLabels[index][2]);
+	sprintf(buff, "%s Layer:%d |%s\n", layerLabels[currentLayer][4], currentLayer, encoderLabels[index][2]);
 	oled_write(buff, false);
 }
 
