@@ -156,8 +156,8 @@ struct key_info
     uint8_t key_width; 
 };
 
-#define V_KEYB_X_OFF 2
-#define V_KEYB_Y_OFF 2
+#define V_KEYB_X_OFF 20
+#define V_KEYB_Y_OFF 5
 #define U1_00_W 4
 #define U1_25_W 5
 #define U1_50_W 6
